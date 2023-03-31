@@ -41,7 +41,7 @@ public class InventoryController {
 		}
 	}
 
-	@PostMapping("/addQuantity")
+	@PostMapping("/SA-IN")
 	public ResponseEntity<Object> addQuantity(@RequestParam("partNumber") String partNumber,
 			@RequestParam("serialNumber") String serialNumber, @RequestParam("quantity") String quantity) {
 
@@ -67,7 +67,7 @@ public class InventoryController {
 		return CustomResponseHandler.generateResponse(Arrays.asList("Added the quantity"), HttpStatus.OK, inventory);
 	}
 
-	@PostMapping("/deductQuantity")
+	@PostMapping("/SA-OUT")
 	public ResponseEntity<Object> deductQuantity(@RequestParam("partNumber") String partNumber,
 			@RequestParam("serialNumber") String serialNumber, @RequestParam("quantity") String quantity) {
 
